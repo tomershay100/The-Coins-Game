@@ -1,8 +1,6 @@
 //323082701
 
 import java.awt.*;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Geometries.Rectangle Object - each Geometries.Rectangle has a width, a height and a Geometries.Point.

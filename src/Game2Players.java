@@ -63,8 +63,13 @@ public class Game2Players extends Game {
         moneyListSize = getSizeFromUser();
         moneyList = new MoneyList(moneyListSize);
 
-        p1 = player1;
-        p2 = player2;
+        if (Math.random() > 0.5) {
+            p1 = player1;
+            p2 = player2;
+        } else {
+            p2 = player1;
+            p1 = player2;
+        }
 
         if (!p1.isMyTurn()) {
             p1.setMyTurn();
@@ -205,7 +210,7 @@ public class Game2Players extends Game {
                 clip.open(sound);
                 clip.setFramePosition(0);
                 clip.start();
-                sleeper.sleepFor(5200 - 2000);
+                //sleeper.sleepFor(5200 - 2000);
             } else {
                 String filePath = "src\\extra\\winSound.wav";
                 AudioInputStream audioInput = AudioSystem.getAudioInputStream(
@@ -213,7 +218,7 @@ public class Game2Players extends Game {
                 Clip clip = AudioSystem.getClip();
                 clip.open(audioInput);
                 clip.start();
-                sleeper.sleepFor(5500 - 2000);
+                //sleeper.sleepFor(5500 - 2000);
             }
         } catch (Exception ignored) {
             System.out.print("");

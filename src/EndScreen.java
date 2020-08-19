@@ -12,6 +12,7 @@ public class EndScreen {
     boolean isCPressed;
     boolean isNPressed;
     boolean isRPressed;
+
     public EndScreen(Player p1, Player p2, MoneyList moneyListCopy) {
         this.p1 = p1;
         this.p2 = p2;
@@ -21,6 +22,7 @@ public class EndScreen {
         isRPressed = true;
         moneyList = moneyListCopy;
     }
+
     public void run(GUI gui) {
         Sleeper sleeper = new Sleeper();
 
@@ -43,7 +45,7 @@ public class EndScreen {
                 d.drawText(100, 100, p1.getName() + " is the winner with " + p1.getSum() + "$", 20);
             } else if (p1.getSum() < p2.getSum()) {
                 d.drawText(100, 100, p2.getName() + " is the winner with " + p2.getSum() + "$", 20);
-            } else if (p1.getSum() == p2.getSum()){
+            } else if (p1.getSum() == p2.getSum()) {
                 d.drawText(100, 100, "It's a draw!", 20);
             }
 
@@ -56,31 +58,31 @@ public class EndScreen {
             d.drawText(500, 400, p1.getName() + ": " + p1.getVictories(), 20);
             d.drawText(500, 450, p2.getName() + ": " + p2.getVictories(), 20);
 
-            if((gui.getKeyboardSensor().isPressed("Q") || gui.getKeyboardSensor().isPressed("q")) && !isQPressed) {
+            if ((gui.getKeyboardSensor().isPressed("Q") || gui.getKeyboardSensor().isPressed("q")) && !isQPressed) {
                 System.exit(0);
-            } else if(!gui.getKeyboardSensor().isPressed("Q") && !gui.getKeyboardSensor().isPressed("q")) {
+            } else if (!gui.getKeyboardSensor().isPressed("Q") && !gui.getKeyboardSensor().isPressed("q")) {
                 isQPressed = false;
             }
-            if((gui.getKeyboardSensor().isPressed("N") || gui.getKeyboardSensor().isPressed("n")) && !isNPressed) {
+            if ((gui.getKeyboardSensor().isPressed("N") || gui.getKeyboardSensor().isPressed("n")) && !isNPressed) {
                 Game2Players.play();
                 System.exit(0);
-            } else if(!gui.getKeyboardSensor().isPressed("N") && !gui.getKeyboardSensor().isPressed("n")) {
+            } else if (!gui.getKeyboardSensor().isPressed("N") && !gui.getKeyboardSensor().isPressed("n")) {
                 isNPressed = false;
             }
-            if((gui.getKeyboardSensor().isPressed("C") || gui.getKeyboardSensor().isPressed("c")) && !isCPressed) {
+            if ((gui.getKeyboardSensor().isPressed("C") || gui.getKeyboardSensor().isPressed("c")) && !isCPressed) {
                 p1.addSum(-p1.getSum());
                 p2.addSum(-p2.getSum());
                 Game2Players game = new Game2Players(p1, p2);
                 game.run();
-            } else if(!gui.getKeyboardSensor().isPressed("C") && !gui.getKeyboardSensor().isPressed("c")) {
+            } else if (!gui.getKeyboardSensor().isPressed("C") && !gui.getKeyboardSensor().isPressed("c")) {
                 isCPressed = false;
             }
-            if((gui.getKeyboardSensor().isPressed("R") || gui.getKeyboardSensor().isPressed("r")) && !isRPressed) {
+            if ((gui.getKeyboardSensor().isPressed("R") || gui.getKeyboardSensor().isPressed("r")) && !isRPressed) {
                 p1.addSum(-p1.getSum());
                 p2.addSum(-p2.getSum());
                 Game2Players game = new Game2Players(p1, p2, moneyList);
                 game.run();
-            } else if(!gui.getKeyboardSensor().isPressed("R") && !gui.getKeyboardSensor().isPressed("r")) {
+            } else if (!gui.getKeyboardSensor().isPressed("R") && !gui.getKeyboardSensor().isPressed("r")) {
                 isRPressed = false;
             }
             gui.show(d);

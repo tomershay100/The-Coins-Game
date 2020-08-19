@@ -1,7 +1,9 @@
 //323082701
+
 import biuoop.DrawSurface;
 
-import java.awt.Color;
+import java.awt.*;
+
 /**
  * Sun class.
  *

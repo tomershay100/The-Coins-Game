@@ -3,11 +3,12 @@ import biuoop.DrawSurface;
 import java.awt.*;
 import java.util.Random;
 
-public class MoneyList implements Sprite{
-    public Money[] gameCoinsCopy;
+public class MoneyList implements Sprite {
+    public static int[] valuesArray = new int[]{1, 5, 10, 20, 50, 70, 100};
     final Money[] gameCoins;
+    public Money[] gameCoinsCopy;
     private int size;
-    public static int[] valuesArray = new int[] {1, 5, 10, 20, 50, 70, 100};
+
     public MoneyList(int size) {
         this.size = size;
         this.gameCoins = new Money[size];
@@ -65,7 +66,7 @@ public class MoneyList implements Sprite{
     }
 
     public Money getLast() {
-        return this.gameCoins[size-1];
+        return this.gameCoins[size - 1];
     }
 
     public int getSize() {

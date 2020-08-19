@@ -10,14 +10,10 @@ public class Game {
 
     }
 
-    public void run() {
-
-    }
-
     public static void play() {
         Game game;
         DialogManager d = gui.getDialogManager();
-        if(d.showYesNoDialog("The Coins Game", "Do you have friends?")) {
+        if (d.showYesNoDialog("The Coins Game", "Do you have friends?")) {
             game = new Game2Players();
         } else {
             game = new Game2Players(new ComputerPlayer());
@@ -27,6 +23,10 @@ public class Game {
 
     public static void main(String[] args) {
         play();
+
+    }
+
+    public void run() {
 
     }
 

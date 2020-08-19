@@ -1,4 +1,5 @@
 //323082701
+
 import biuoop.DrawSurface;
 
 import java.awt.*;
@@ -13,6 +14,7 @@ import java.awt.*;
 public class Clouds implements Sprite {
     /**
      * draw One Cloud on given DrawSurface.
+     *
      * @param d the DrawSurface.
      * @param x the x axis.
      * @param y the y axis.

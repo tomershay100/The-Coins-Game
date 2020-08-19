@@ -3,8 +3,8 @@ import biuoop.DrawSurface;
 import java.awt.*;
 
 public class Money {
-    private final int value;
     static final int SIZE = 30;
+    private final int value;
     private final Point center;
     private Color color;
 

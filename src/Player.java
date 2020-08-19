@@ -6,20 +6,20 @@ import biuoop.Sleeper;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
-import java.awt.Color;
+import java.awt.*;
 import java.io.File;
 import java.net.URL;
 import java.util.List;
 
 
 public class Player implements Sprite {
-    private int sum;
     private final String name;
+    protected boolean isFirstPressed;
+    private int sum;
     private boolean isMyTurn;
     private boolean isLeftPlayer;
     private int victories;
     private boolean enterAlreadyPressed;
-    protected boolean isFirstPressed;
 
     public Player(String name) {
         this.name = name;
