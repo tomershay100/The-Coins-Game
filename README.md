@@ -1,11 +1,32 @@
 # The Coins Game
-You can choose the left or the right coin in the game (using the left & right arrows and pressing enter).
-You can play against a friend or against the computer.
-The goal - to make as much money as you can.
+1. [Introduction](#introduction)
+2. [Dependencies](#dependencies)  
+3. [Installation](#installation)
 
-You need java 13 and you can download TheCoinsGame.jar and run it with: >TheCoinsGame.jar on command prompt or press the file
-you can also view the code in the .java files under src folder, The audio .wav files are located in resources folder.
+## Introduction
+The Coins game combines object-oriented programming with a dynamic programming algorithm. In the game you will have to choose by the arrows one of the end coins - the goal: to get more money than the computer.
+The game contains stages with increasing difficulty levels, varied backgrounds and some audio.
+The game is implemented in Java using OOP principles:
+* Use of polymorphism and inheritance.
+* Using java collections and data structures.
+* Creating the game with different numbers of coins.
+* keep open/closed principle states.
+* Working with GUI.
 
-run from commend-prompt or terminal using ant: https://ant.apache.org/ use the bulid.xml file and run:
-* The-Coins-Game-master>ant compile
-* The-Coins-Game-master>ant run
+## Dependencies
+* Windows / Linux / macOS
+* Git
+* Keyboard
+* Screen
+
+## Installation
+1. Clone the repository:  
+    ```
+    $ git clone https://github.com/tomershay100/The-Coins-Game.git
+    ```
+2. run this commands:
+    ```
+    $ make
+    $ make jar
+    $ make run
+    ```
