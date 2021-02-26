@@ -5,7 +5,7 @@
 
 ## Introduction
 The Coins game combines object-oriented programming with a dynamic programming algorithm. In the game you will have to choose by the arrows one of the end coins - the goal: to get more money than the computer.
-The game contains stages with increasing difficulty levels, varied backgrounds and some audio.
+The game contains menu with option to return to the previous game, get an input from the user, audio and more.
 The game is implemented in Java using OOP principles:
 * Use of polymorphism and inheritance.
 * Using java collections and data structures.
